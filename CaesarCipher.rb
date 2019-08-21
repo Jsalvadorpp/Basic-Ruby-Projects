@@ -2,7 +2,8 @@ def caesarCipher(text,shift)
     output = ""
     text.each_byte do |charCode|
 
-        newCharCode = charCode + shift
+        
+        newCharCode = charCode + (shift).abs()
 
         if charCode.between?(97,122)
             
@@ -27,4 +28,4 @@ def caesarCipher(text,shift)
     return output
 end
 
-print caesarCipher("What a string!",5)
+#print caesarCipher("What a string!",5)
